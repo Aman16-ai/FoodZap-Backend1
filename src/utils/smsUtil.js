@@ -1,8 +1,8 @@
 const twilio = require("twilio");
 
 const client = twilio(
-  "AC9c5572b1664f0442c08d307cbb3ab8be",
-  "2cdd07a52fdfd2bf3ed3cb57bd04234a"
+  process.env.twilio_account_sid,
+  process.env.twilio_auth_token
 );
 
 const sendMessage = (number,message) => {
